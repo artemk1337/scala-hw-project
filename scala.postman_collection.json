@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "85277903-ca93-42ce-aea9-46771fed92e6",
+		"name": "scala",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21005596"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneNumber\": 3,\r\n    \"email\": \"test3@mail.ru\",\r\n    \"money\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/user?id=16e643a4-4c8c-448f-bf0c-80b1ddd8b2b3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "16e643a4-4c8c-448f-bf0c-80b1ddd8b2b3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add money",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/user/money/add?id=16e643a4-4c8c-448f-bf0c-80b1ddd8b2b3&money=1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"money",
+						"add"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "16e643a4-4c8c-448f-bf0c-80b1ddd8b2b3"
+						},
+						{
+							"key": "money",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subtract money",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/user/money/sub?id=16e643a4-4c8c-448f-bf0c-80b1ddd8b2b3&money=501",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"money",
+						"sub"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "16e643a4-4c8c-448f-bf0c-80b1ddd8b2b3"
+						},
+						{
+							"key": "money",
+							"value": "501"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer money with cashback",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"srcUserId\": \"16e643a4-4c8c-448f-bf0c-80b1ddd8b2b3\",\r\n    \"dstUserId\": \"2635cafc-e40e-4e57-a05c-d78de6d7fcb6\",\r\n    \"moneyChange\": 20,\r\n    \"category\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/user?id=14e74164-3a9d-4406-afa1-b9360e074c2f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "14e74164-3a9d-4406-afa1-b9360e074c2f"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
